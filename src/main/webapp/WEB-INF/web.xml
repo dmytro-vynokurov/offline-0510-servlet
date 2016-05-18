@@ -1,7 +1,7 @@
 <web-app>
     <servlet>
         <servlet-name>servlet</servlet-name>
-        <servlet-class>ua.goit.HelloWorldServlet</servlet-class>
+        <servlet-class>ua.goit.web.servlet.HelloWorldServlet</servlet-class>
     </servlet>
 
 

@@ -1,4 +1,4 @@
-package ua.goit;
+package ua.goit.service;
 
 
 import java.util.Collections;

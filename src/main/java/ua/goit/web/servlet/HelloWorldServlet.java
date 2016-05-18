@@ -1,4 +1,6 @@
-package ua.goit;
+package ua.goit.web.servlet;
+
+import ua.goit.service.SearchingService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
