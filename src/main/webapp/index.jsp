@@ -4,6 +4,10 @@
     <title>Index</title>
 </head>
 <body>
+
+<%@include file="templates/header.jsp" %>
+
+
 <h1>Welcome to the index page!</h1>
 </body>
 </html>
