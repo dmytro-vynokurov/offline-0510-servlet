@@ -17,6 +17,17 @@
 </c:forEach>
 
 
+
+<br/>
+<br/>
+${topics}
+<br/>
+<br/>
+
+<br/>
+<%=request.getAttribute("topics")%>
+
+
 <form action="article" method="post">
     <input type="text" title="topic" name="topic"/>
     <button type="submit" >Submit topic</button>
