@@ -3,11 +3,19 @@
         <servlet-name>servlet</servlet-name>
         <servlet-class>ua.goit.web.servlet.HelloWorldServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>articleServlet</servlet-name>
+        <servlet-class>ua.goit.web.servlet.ArticleServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
         <servlet-name>servlet</servlet-name>
         <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>articleServlet</servlet-name>
+        <url-pattern>/article</url-pattern>
     </servlet-mapping>
 
     <filter>

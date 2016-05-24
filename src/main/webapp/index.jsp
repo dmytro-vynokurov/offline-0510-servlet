@@ -9,5 +9,13 @@
 
 
 <h1>Welcome to the index page!</h1>
+
+
+<form action="article" method="post">
+    <input type="text" title="topic" name="topic"/>
+    <button type="submit" >Submit topic</button>
+</form>
+
+
 </body>
 </html>
