@@ -12,6 +12,10 @@
         <servlet-name>articleServlet</servlet-name>
         <servlet-class>ua.goit.web.servlet.ArticleServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>navigationServlet</servlet-name>
+        <servlet-class>ua.goit.web.servlet.NavigationServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -21,6 +25,10 @@
     <servlet-mapping>
         <servlet-name>articleServlet</servlet-name>
         <url-pattern>/article</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>navigationServlet</servlet-name>
+        <url-pattern>/navigate</url-pattern>
     </servlet-mapping>
 
     <filter>

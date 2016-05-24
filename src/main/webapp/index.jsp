@@ -43,6 +43,14 @@ ${topics}
     <button type="submit" >Submit topic</button>
 </form>
 
+<form action="navigate" method="post">
+    <input type="text" name="someImportantData"/>
+    <input type="text" name="pageName"/>
+    <button type="submit" >Submit data and navigate to different page</button>
+</form>
+
+
+
 
 </body>
 </html>
