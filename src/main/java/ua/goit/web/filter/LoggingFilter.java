@@ -11,10 +11,9 @@ public class LoggingFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String query = request.getParameter("q");
-        System.out.println("*************     request received with query "+query);
+        System.out.println("*************     request received with parameters "+request.getParameterMap().keySet());
         chain.doFilter(request, response);
-        System.out.println("*************     request processed with query "+query);
+        System.out.println("*************     request processed with parameters "+request.getParameterMap().keySet());
     }
 
     @Override
