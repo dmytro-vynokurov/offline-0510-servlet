@@ -1,3 +1,4 @@
+<%@ page import="java.util.Random" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -27,6 +28,15 @@ ${topics}
 <br/>
 <%=request.getAttribute("topics")%>
 
+
+<br/>
+<%
+    Random random = new Random();
+    for(int i=0;i<100;i++){
+        int r = random.nextInt(20);
+        out.println(r);
+    }
+%>
 
 <form action="article" method="post">
     <input type="text" title="topic" name="topic"/>
