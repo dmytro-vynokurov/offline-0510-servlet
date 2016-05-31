@@ -1,5 +1,3 @@
-<%@ page import="ua.goit.service.TopicService" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -48,11 +46,6 @@
 
 <h1>Welcome to the index page!</h1>
 
-<%
-    TopicService topicService = new TopicService();
-    List<String> topics = topicService.getTopics();
-    out.println(topics);
-%>
 <div id="topics"></div>
 
 <br/>
