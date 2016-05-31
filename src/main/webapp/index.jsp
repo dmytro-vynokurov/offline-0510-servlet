@@ -63,7 +63,7 @@ ${topics}
 %>
 
 <br/>
-<div id="random-numbers"/>
+<div id="random-numbers"></div>
 
 <form action="article" method="post">
     <input type="text" title="topic" name="topic"/>
