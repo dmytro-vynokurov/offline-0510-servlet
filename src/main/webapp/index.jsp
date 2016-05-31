@@ -1,6 +1,5 @@
 <%@ page import="ua.goit.service.TopicService" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Random" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -13,6 +12,18 @@
             var message = "<c:out value="${topics}"/>";
             console.log(message);
         }
+
+        function printRandomNumbers(){
+            var stringBuffer = "";
+            for (i = 0; i < 100; i++) {
+                var r = Math.floor(Math.random() * 20);
+                stringBuffer += r + " ";
+            }
+            var randomNumbersDOMElement = document.getElementById("random-numbers");
+            randomNumbersDOMElement.innerHTML = stringBuffer;
+        }
+
+
     </script>
 
 </head>
@@ -52,13 +63,7 @@ ${topics}
 %>
 
 <br/>
-<%
-    Random random = new Random();
-    for(int i=0;i<100;i++){
-        int r = random.nextInt(20);
-        out.println(r);
-    }
-%>
+<div id="random-numbers"/>
 
 <form action="article" method="post">
     <input type="text" title="topic" name="topic"/>
@@ -75,4 +80,11 @@ ${topics}
 
 
 </body>
+
+<script>
+    printRandomNumbers();
+</script>
+
+
+
 </html>
