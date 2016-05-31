@@ -23,6 +23,16 @@
             randomNumbersDOMElement.innerHTML = stringBuffer;
         }
 
+        function loadTopics(){
+            var xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.onreadystatechange = function(){
+                if(xmlHttpRequest.readyState==4 && xmlHttpRequest.status==200) {
+                    document.getElementById("topics").innerHTML = xmlHttpRequest.responseText;
+                }
+            };
+            xmlHttpRequest.open("GET", "topics", true);
+            xmlHttpRequest.send();
+        }
 
     </script>
 
@@ -43,6 +53,7 @@
     List<String> topics = topicService.getTopics();
     out.println(topics);
 %>
+<div id="topics"></div>
 
 <br/>
 <div id="random-numbers"></div>
@@ -65,6 +76,7 @@
 
 <script>
     printRandomNumbers();
+    loadTopics();
 </script>
 
 

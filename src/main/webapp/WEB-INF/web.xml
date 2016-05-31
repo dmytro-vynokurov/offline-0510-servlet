@@ -16,6 +16,10 @@
         <servlet-name>navigationServlet</servlet-name>
         <servlet-class>ua.goit.web.servlet.NavigationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>topicServlet</servlet-name>
+        <servlet-class>ua.goit.web.servlet.TopicServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -29,6 +33,10 @@
     <servlet-mapping>
         <servlet-name>navigationServlet</servlet-name>
         <url-pattern>/navigate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>topicServlet</servlet-name>
+        <url-pattern>/topics</url-pattern>
     </servlet-mapping>
 
     <filter>
