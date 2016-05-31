@@ -9,7 +9,7 @@
 
     <script type="application/javascript">
         function printHello(){
-            var message = "<c:out value="${topics}"/>";
+            var message = "Hello";
             console.log(message);
         }
 
@@ -30,7 +30,6 @@
 <body>
 
 
-<c:out value="${topics}"/>
 <button onclick="printHello()">Say hello</button>
 
 
@@ -39,23 +38,6 @@
 
 <h1>Welcome to the index page!</h1>
 
-<c:forEach items="${topics}" var="topic">
-    ${topic},
-</c:forEach>
-
-<br/>
-<br/>
-${topics}
-<br/>
-<br/>
-
-<br/>
-<%=request.getAttribute("topics")%>
-<%=request.getParameter("topics")%>
-
-
-<br/>
-<br/>
 <%
     TopicService topicService = new TopicService();
     List<String> topics = topicService.getTopics();
