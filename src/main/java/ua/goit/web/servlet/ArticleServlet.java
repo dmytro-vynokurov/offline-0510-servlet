@@ -1,6 +1,7 @@
 package ua.goit.web.servlet;
 
 import ua.goit.service.TopicService;
+import ua.goit.web.template.TemplateManager;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -14,6 +15,7 @@ import java.util.List;
 public class ArticleServlet extends HttpServlet {
 
     TopicService topicService = new TopicService();
+    TemplateManager templateManager = new TemplateManager();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,7 +23,9 @@ public class ArticleServlet extends HttpServlet {
         System.out.println(topic);
         List<String> topics = topicService.addTopic(topic);
         req.setAttribute("topics", topics);
-        forward(req, resp);
+//        forward(req, resp);
+        String template = templateManager.loadTemplate("test.ftl");
+        resp.getWriter().print(template);
     }
 
     private void forward(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
